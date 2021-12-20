@@ -4,7 +4,7 @@ min=`grep "Min Latencies" output | tr " " "\n" | sort -n | tail -1 | sed s/^0*//
 grep -v -e "^#" -e "^$" output | tr " " "\t" >histogram 
 
 #update cores cnts
-cores=2
+cores=4
 
 for i in `seq 1 $cores`
 do
@@ -15,7 +15,7 @@ echo -n -e "set title \"Latency plot\"\n\
 set terminal png\n\
 set xlabel \"Latency (us), max $max us, avg $avg us, min $min us\"\n\
 set logscale y\n\
-set xrange [0:200]\n\
+set xrange [0:400]\n\
 set yrange [0.8:*]\n\
 set ylabel \"Number of latency samples\"\n\
 set output \"plot.png\"\n\
