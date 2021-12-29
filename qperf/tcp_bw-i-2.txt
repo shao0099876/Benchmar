@@ -1,0 +1,52 @@
+tcp_bw:
+    bw        =  320 KB/sec
+    msg_size  =    1 bytes
+tcp_bw:
+    bw        =  307 KB/sec
+    msg_size  =    2 bytes
+tcp_bw:
+    bw        =  764 KB/sec
+    msg_size  =    4 bytes
+tcp_bw:
+    bw        =  1.25 MB/sec
+    msg_size  =     8 bytes
+tcp_bw:
+    bw        =  899 KB/sec
+    msg_size  =   16 bytes
+tcp_bw:
+    bw        =  3.41 MB/sec
+    msg_size  =    32 bytes
+tcp_bw:
+    bw        =  3.49 MB/sec
+    msg_size  =    64 bytes
+tcp_bw:
+    bw        =  4.4 MB/sec
+    msg_size  =  128 bytes
+tcp_bw:
+    bw        =  114 MB/sec
+    msg_size  =  256 bytes
+tcp_bw:
+    bw        =  118 MB/sec
+    msg_size  =  512 bytes
+tcp_bw:
+    bw        =  118 MB/sec
+    msg_size  =    1 KiB (1,024)
+tcp_bw:
+    bw        =  118 MB/sec
+    msg_size  =    2 KiB (2,048)
+tcp_bw:
+    bw        =  118 MB/sec
+    msg_size  =    4 KiB (4,096)
+tcp_bw:
+    bw        =  118 MB/sec
+    msg_size  =    8 KiB (8,192)
+tcp_bw:
+    bw        =  119 MB/sec
+    msg_size  =   16 KiB (16,384)
+tcp_bw:
+    bw        =  119 MB/sec
+    msg_size  =   32 KiB (32,768)
+tcp_bw:
+    bw        =  119 MB/sec
+    msg_size  =   64 KiB (65,536)
+quit:

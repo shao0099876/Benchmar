@@ -19,11 +19,6 @@ def qperf_process():
     qperf_process_tcp_lat()
     qperf_process_udp_lat()
 
-def iozone_process():
-    iozone_process_1G()
-    iozone_process_2G()
-    iozone_process_4G()
-
 if __name__ == '__main__':
     cyclictest_process()
     stream_process()

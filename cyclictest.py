@@ -1,43 +1,53 @@
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
 def cyclictest_process_realtime():
-    x=[]
-    y=[]
-    file=open("./cyclictest/realtime")
-    string=file.read()
-    strings=string.split("\n")
-    for i in range(12,100):
-        string=strings[i]
-        tmp=string.split(' ')
-        x.append(int(tmp[0]))
-        y.append(int(tmp[1]))
-    plt.plot(x, y, "g", marker='D', markersize=2, label="")
+    colors=list(mcolors.TABLEAU_COLORS.keys()) #颜色变化
+    testbench = [0, 1, 2, 4, 8]
+    for testbench_process in testbench:
+        x = []
+        y = []
+        file = open("./cyclictest/realtime-" + str(testbench_process))
+        string = file.read()
+        strings = string.split("\n")
+        for i in range(0 + 2, 100 + 2):
+            string = strings[i]
+            tmp = string.split(' ')
+            x.append(int(tmp[0]))
+            y.append(int(tmp[1]))
+        plt.plot(x, y, mcolors.TABLEAU_COLORS[colors[testbench_process]], marker='D', markersize=2, label="workload process=" + str(testbench_process))
+        file.close()
     plt.xlabel("Latency(us)")
     plt.ylabel("Times")
     plt.title("Cyclictest Context Latency Benchmark")
     plt.legend(loc='upper right')
     #plt.show()
-    plt.savefig("./cyclictest/realtime.jpg")
+    plt.savefig("./cyclictest/realtime.jpg",dpi=500)
     plt.clf()
     plt.cla()
-    file.close()
+
+
 def cyclictest_process_normal():
-    x=[]
-    y=[]
-    file=open("./cyclictest/normal")
-    string=file.read()
-    strings=string.split("\n")
-    for i in range(12,100):
-        string=strings[i]
-        tmp=string.split(' ')
-        x.append(int(tmp[0]))
-        y.append(int(tmp[1]))
-    plt.plot(x, y, "g", marker='D', markersize=2, label="")
+    colors=list(mcolors.TABLEAU_COLORS.keys()) #颜色变化
+    testbench = [0, 1, 2, 4, 8]
+    for testbench_process in testbench:
+        x = []
+        y = []
+        file = open("./cyclictest/normal-" + str(testbench_process))
+        string = file.read()
+        strings = string.split("\n")
+        for i in range(0 + 2, 100 + 2):
+            string = strings[i]
+            tmp = string.split(' ')
+            x.append(int(tmp[0]))
+            y.append(int(tmp[1]))
+        plt.plot(x, y, mcolors.TABLEAU_COLORS[colors[testbench_process]], marker='D', markersize=2, label="workload process=" + str(testbench_process))
+        file.close()
     plt.xlabel("Latency(us)")
     plt.ylabel("Times")
     plt.title("Cyclictest Context Latency Benchmark")
     plt.legend(loc='upper right')
     #plt.show()
-    plt.savefig("./cyclictest/normal.jpg")
+    plt.savefig("./cyclictest/normal.jpg",dpi=500)
     plt.clf()
     plt.cla()
-    file.close()

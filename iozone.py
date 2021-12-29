@@ -1,129 +1,56 @@
 import matplotlib.pyplot as plt
-def iozone_process_1G():
-    # 1G
-    x = []
-    writer_y = []
-    rewriter_y = []
-    for i in range(2, 15):
-        x.append(i)
-    file = open("./iozone/1G")
-    string = file.read()
-    pos = 0
-    end = pos
-    strings = string.split("\n")
-    for i in range(2, 15):
-        while end != len(strings[0]) and strings[0][end] != '\t':
-            end += 1
-        tmp = strings[0][pos:end]
-        writer_y.append(int(tmp))
-        pos = end
-        while end != len(strings[0]) and strings[0][pos] == '\t':
-            pos += 1
-        end = pos
-    pos = 0
-    end = pos
-    for i in range(2, 15):
-        while end != len(strings[1]) and strings[1][end] != '\t':
-            end += 1
-        tmp = strings[1][pos:end]
-        rewriter_y.append(int(tmp))
-        pos = end
-        while end != len(strings[1]) and strings[1][pos] == '\t':
-            pos += 1
-        end = pos
-    plt.plot(x, writer_y, "g", marker='D', markersize=2, label="writer")
-    plt.plot(x, rewriter_y, "r", marker='D', markersize=2, label="rewriter")
-    plt.xlabel("block size(log2(8 bytes))")
-    plt.ylabel("rate(byte/s)")
-    plt.title("iozone benchmark")
-    plt.legend(loc='upper right')
-    # plt.show()
-    plt.savefig("./iozone/1G.jpg")
-    plt.clf()
-    plt.cla()
-
-def iozone_process_2G():
-    # 1G
-    x = []
-    writer_y = []
-    rewriter_y = []
-    for i in range(2, 15):
-        x.append(i)
-    file = open("./iozone/2G")
-    string = file.read()
-    pos = 0
-    end = pos
-    strings = string.split("\n")
-    for i in range(2, 15):
-        while end != len(strings[0]) and strings[0][end] != '\t':
-            end += 1
-        tmp = strings[0][pos:end]
-        writer_y.append(int(tmp))
-        pos = end
-        while end != len(strings[0]) and strings[0][pos] == '\t':
-            pos += 1
-        end = pos
-    pos = 0
-    end = pos
-    for i in range(2, 15):
-        while end != len(strings[1]) and strings[1][end] != '\t':
-            end += 1
-        tmp = strings[1][pos:end]
-        rewriter_y.append(int(tmp))
-        pos = end
-        while end != len(strings[1]) and strings[1][pos] == '\t':
-            pos += 1
-        end = pos
-    plt.plot(x, writer_y, "g", marker='D', markersize=2, label="writer")
-    plt.plot(x, rewriter_y, "r", marker='D', markersize=2, label="rewriter")
-    plt.xlabel("block size(log2(8 bytes))")
-    plt.ylabel("rate(byte/s)")
-    plt.title("iozone benchmark")
-    plt.legend(loc='upper right')
-    # plt.show()
-    plt.savefig("./iozone/2G.jpg")
-    plt.clf()
-    plt.cla()
-
-def iozone_process_4G():
-    # 1G
-    x = []
-    writer_y = []
-    rewriter_y = []
-    for i in range(2, 15):
-        x.append(i)
-    file = open("./iozone/4G")
-    string = file.read()
-    pos = 0
-    end = pos
-    strings = string.split("\n")
-    for i in range(2, 15):
-        while end != len(strings[0]) and strings[0][end] != '\t':
-            end += 1
-        tmp = strings[0][pos:end]
-        writer_y.append(int(tmp))
-        pos = end
-        while end != len(strings[0]) and strings[0][pos] == '\t':
-            pos += 1
-        end = pos
-    pos = 0
-    end = pos
-    for i in range(2, 15):
-        while end != len(strings[1]) and strings[1][end] != '\t':
-            end += 1
-        tmp = strings[1][pos:end]
-        rewriter_y.append(int(tmp))
-        pos = end
-        while end != len(strings[1]) and strings[1][pos] == '\t':
-            pos += 1
-        end = pos
-    plt.plot(x, writer_y, "g", marker='D', markersize=2, label="writer")
-    plt.plot(x, rewriter_y, "r", marker='D', markersize=2, label="rewriter")
-    plt.xlabel("block size(log2(8 bytes))")
-    plt.ylabel("rate(byte/s)")
-    plt.title("iozone benchmark")
-    plt.legend(loc='upper right')
-    # plt.show()
-    plt.savefig("./iozone/4G.jpg")
-    plt.clf()
-    plt.cla()
+import matplotlib.colors as mcolors
+def iozone_process():
+    colors = list(mcolors.TABLEAU_COLORS.keys())  # 颜色变化
+    workloadtypes = ['i', 'd']
+    for workloadtype in workloadtypes:
+        workloads = [0, 1, 2, 4, 8]
+        if workloadtype[0]=='d':
+            workloads=[0,1,2]
+        file = open("./iozone/test-"+workloadtype)
+        string=file.read()
+        file.close()
+        strings=string.split('\n')
+        index=0
+        x={}
+        writer_y={}
+        rewriter_y={}
+        for workload in workloads:
+            x[workload]=[]
+            writer_y[workload]=[]
+            rewriter_y[workload]=[]
+            raw_nums=strings[index].split("\t")
+            nums=[]
+            for i in raw_nums:
+                nums.append(int(i))
+            for i in range(0, 13):
+                x[workload].append(i+2)
+                writer_y[workload].append(nums[i])
+            index+=1
+            raw_nums = strings[index].split("\t")
+            nums.clear()
+            for i in raw_nums:
+                nums.append(int(i))
+            for i in range(0, 13):
+                rewriter_y[workload].append(nums[i])
+            index+=1
+        for workload in workloads:
+            plt.plot(x[workload], writer_y[workload], mcolors.TABLEAU_COLORS[colors[workload]], marker='D', markersize=2, label="workload process="+str(workload))
+        plt.xlabel("block size(log2(8 bytes))")
+        plt.ylabel("rate(byte/s)")
+        plt.title("iozone benchmark")
+        plt.legend(loc='upper left')
+        # plt.show()
+        plt.savefig("./iozone/writer-"+workloadtype+".jpg",dpi=500)
+        plt.clf()
+        plt.cla()
+        for workload in workloads:
+            plt.plot(x[workload], rewriter_y[workload], mcolors.TABLEAU_COLORS[colors[workload]], marker='D', markersize=2, label="workload process="+str(workload))
+        plt.xlabel("block size(log2(8 bytes))")
+        plt.ylabel("rate(byte/s)")
+        plt.title("iozone benchmark")
+        plt.legend(loc='upper left')
+        # plt.show()
+        plt.savefig("./iozone/rewriter-"+workloadtype+".jpg",dpi=500)
+        plt.clf()
+        plt.cla()
