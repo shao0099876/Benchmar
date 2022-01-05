@@ -8,7 +8,7 @@ def qperf_process_tcp_bw():
         for workload in workloads:
             x = []
             y = []
-            file = open("./qperf/tcp_bw-"+workloadtype+"-"+str(workload)+".txt")
+            file = open("./qperf/qperf-tcp_bw-"+workloadtype+"-"+str(workload)+".txt")
             string = file.read()
             for i in range(0, 17):
                 x.append(i)
@@ -51,7 +51,7 @@ def qperf_process_udp_bw():
         for workload in workloads:
             x = []
             y = []
-            file = open("./qperf/udp_bw-"+workloadtype+"-"+str(workload)+".txt")
+            file = open("./qperf/qperf-udp_bw-"+workloadtype+"-"+str(workload)+".txt")
             string = file.read()
             for i in range(0, 17):
                 x.append(i)
@@ -94,7 +94,7 @@ def qperf_process_tcp_lat():
         for workload in workloads:
             x = []
             y = []
-            file = open("./qperf/tcp_lat-" + workloadtype + "-" + str(workload) + ".txt")
+            file = open("./qperf/qperf-tcp_lat-" + workloadtype + "-" + str(workload) + ".txt")
             string = file.read()
             for i in range(0, 17):
                 x.append(i)
@@ -134,7 +134,7 @@ def qperf_process_udp_lat():
         for workload in workloads:
             x = []
             y = []
-            file = open("./qperf/udp_lat-" + workloadtype + "-" + str(workload) + ".txt")
+            file = open("./qperf/qperf-udp_lat-" + workloadtype + "-" + str(workload) + ".txt")
             string = file.read()
             for i in range(0, 17):
                 x.append(i)

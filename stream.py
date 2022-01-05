@@ -10,7 +10,7 @@ def stream_process_copy():
             y=[]
             for i in range(1, 28):
                 x.append(i)
-                file = open("./stream/res-"+workloadtype+"-"+str(workload)+"-" + str(i))
+                file = open("./stream/stream-res-"+workloadtype+"-"+str(workload)+"-" + str(i))
                 string=file.read()
                 pos=string.find("Copy")
                 string=string[pos:]
@@ -44,7 +44,7 @@ def stream_process_scale():
             y = []
             for i in range(1, 28):
                 x.append(i)
-                file = open("./stream/res-" + workloadtype + "-" + str(workload) + "-" + str(i))
+                file = open("./stream/stream-res-" + workloadtype + "-" + str(workload) + "-" + str(i))
                 string = file.read()
                 pos = string.find("Scale")
                 string = string[pos:]
@@ -79,7 +79,7 @@ def stream_process_add():
             y = []
             for i in range(1, 28):
                 x.append(i)
-                file = open("./stream/res-" + workloadtype + "-" + str(workload) + "-" + str(i))
+                file = open("./stream/stream-res-" + workloadtype + "-" + str(workload) + "-" + str(i))
                 string = file.read()
                 pos = string.find("Add")
                 string = string[pos:]
@@ -114,7 +114,7 @@ def stream_process_triad():
             y = []
             for i in range(1, 28):
                 x.append(i)
-                file = open("./stream/res-" + workloadtype + "-" + str(workload) + "-" + str(i))
+                file = open("./stream/stream-res-" + workloadtype + "-" + str(workload) + "-" + str(i))
                 string = file.read()
                 pos = string.find("Triad")
                 string = string[pos:]

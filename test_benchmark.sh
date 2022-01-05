@@ -17,7 +17,7 @@ function test_iozone(){
 function kill_stress(){
     ps -efww|grep -w 'stress'|grep -v grep|awk '{print $2}'|xargs kill -9
 }
-kill_stress
+kill_stress bbnm
 for workloadtype in "c" "i" "m"
 do
     for workload in 0 1 2 4 8

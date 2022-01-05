@@ -7,7 +7,7 @@ def cyclictest_process_realtime():
     for testbench_process in testbench:
         x = []
         y = []
-        file = open("./cyclictest/realtime-" + str(testbench_process))
+        file = open("./cyclictest/cyclictest-realtime-" + str(testbench_process))
         string = file.read()
         strings = string.split("\n")
         for i in range(0 + 2, 100 + 2):
@@ -33,7 +33,7 @@ def cyclictest_process_normal():
     for testbench_process in testbench:
         x = []
         y = []
-        file = open("./cyclictest/normal-" + str(testbench_process))
+        file = open("./cyclictest/cyclictest-normal-" + str(testbench_process))
         string = file.read()
         strings = string.split("\n")
         for i in range(0 + 2, 100 + 2):
