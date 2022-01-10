@@ -1,67 +1,67 @@
 udp_bw:
-    send_bw   =  87.8 KB/sec
-    recv_bw   =  87.8 KB/sec
+    send_bw   =  38.4 KB/sec
+    recv_bw   =  38.4 KB/sec
     msg_size  =     1 bytes
 udp_bw:
-    send_bw   =  133 KB/sec
-    recv_bw   =  133 KB/sec
-    msg_size  =    2 bytes
+    send_bw   =  75.7 KB/sec
+    recv_bw   =  74.5 KB/sec
+    msg_size  =     2 bytes
 udp_bw:
-    send_bw   =  266 KB/sec
-    recv_bw   =  266 KB/sec
+    send_bw   =  257 KB/sec
+    recv_bw   =  257 KB/sec
     msg_size  =    4 bytes
 udp_bw:
-    send_bw   =  524 KB/sec
-    recv_bw   =  524 KB/sec
+    send_bw   =  392 KB/sec
+    recv_bw   =  392 KB/sec
     msg_size  =    8 bytes
 udp_bw:
-    send_bw   =  1.08 MB/sec
-    recv_bw   =  1.08 MB/sec
-    msg_size  =    16 bytes
+    send_bw   =  676 KB/sec
+    recv_bw   =  676 KB/sec
+    msg_size  =   16 bytes
 udp_bw:
-    send_bw   =  2.11 MB/sec
-    recv_bw   =  2.11 MB/sec
+    send_bw   =  1.09 MB/sec
+    recv_bw   =  1.09 MB/sec
     msg_size  =    32 bytes
 udp_bw:
-    send_bw   =  4.19 MB/sec
-    recv_bw   =  4.19 MB/sec
+    send_bw   =  2.34 MB/sec
+    recv_bw   =  2.34 MB/sec
     msg_size  =    64 bytes
 udp_bw:
-    send_bw   =  10.6 MB/sec
-    recv_bw   =  10.7 MB/sec
+    send_bw   =  3.23 MB/sec
+    recv_bw   =  3.18 MB/sec
     msg_size  =   128 bytes
 udp_bw:
-    send_bw   =  16.6 MB/sec
-    recv_bw   =  16.6 MB/sec
+    send_bw   =  13.4 MB/sec
+    recv_bw   =  13.4 MB/sec
     msg_size  =   256 bytes
 udp_bw:
-    send_bw   =  43.2 MB/sec
-    recv_bw   =  43.2 MB/sec
+    send_bw   =  17.7 MB/sec
+    recv_bw   =  17.7 MB/sec
     msg_size  =   512 bytes
 udp_bw:
-    send_bw   =  76.9 MB/sec
-    recv_bw   =  76.9 MB/sec
+    send_bw   =  10.3 MB/sec
+    recv_bw   =  10.3 MB/sec
     msg_size  =     1 KiB (1,024)
 udp_bw:
-    send_bw   =  91.5 MB/sec
-    recv_bw   =  91.5 MB/sec
+    send_bw   =  10.4 MB/sec
+    recv_bw   =  10.4 MB/sec
     msg_size  =     2 KiB (2,048)
 udp_bw:
-    send_bw   =  113 MB/sec
-    recv_bw   =  113 MB/sec
-    msg_size  =    4 KiB (4,096)
+    send_bw   =  10.5 MB/sec
+    recv_bw   =  10.5 MB/sec
+    msg_size  =     4 KiB (4,096)
 udp_bw:
-    send_bw   =  87.2 MB/sec
-    recv_bw   =  87.1 MB/sec
+    send_bw   =  21.4 MB/sec
+    recv_bw   =  21.4 MB/sec
     msg_size  =     8 KiB (8,192)
 udp_bw:
-    send_bw   =  93 MB/sec
-    recv_bw   =  93 MB/sec
-    msg_size  =  16 KiB (16,384)
+    send_bw   =  15.6 MB/sec
+    recv_bw   =  15.6 MB/sec
+    msg_size  =    16 KiB (16,384)
 udp_bw:
-    send_bw   =  102 MB/sec
-    recv_bw   =  102 MB/sec
-    msg_size  =   32 KiB (32,768)
+    send_bw   =  23.1 MB/sec
+    recv_bw   =  23.1 MB/sec
+    msg_size  =    32 KiB (32,768)
 udp_bw:
     send_bw   =   0 bytes/sec
     recv_bw   =   0 bytes/sec

@@ -1,52 +1,52 @@
 tcp_lat:
-    latency   =  137 us
+    latency   =  140 us
     msg_size  =    1 bytes
 tcp_lat:
-    latency   =  100 us
+    latency   =  181 us
     msg_size  =    2 bytes
 tcp_lat:
-    latency   =  95.7 us
-    msg_size  =     4 bytes
+    latency   =  181 us
+    msg_size  =    4 bytes
 tcp_lat:
-    latency   =  95.9 us
-    msg_size  =     8 bytes
+    latency   =  182 us
+    msg_size  =    8 bytes
 tcp_lat:
-    latency   =  95.6 us
-    msg_size  =    16 bytes
+    latency   =  182 us
+    msg_size  =   16 bytes
 tcp_lat:
-    latency   =  95.5 us
-    msg_size  =    32 bytes
+    latency   =  181 us
+    msg_size  =   32 bytes
 tcp_lat:
-    latency   =  95.7 us
-    msg_size  =    64 bytes
+    latency   =  181 us
+    msg_size  =   64 bytes
 tcp_lat:
-    latency   =  95.5 us
-    msg_size  =   128 bytes
+    latency   =  182 us
+    msg_size  =  128 bytes
 tcp_lat:
-    latency   =  95.9 us
-    msg_size  =   256 bytes
+    latency   =  183 us
+    msg_size  =  256 bytes
 tcp_lat:
-    latency   =   96 us
+    latency   =  183 us
     msg_size  =  512 bytes
 tcp_lat:
-    latency   =  95.9 us
-    msg_size  =     1 KiB (1,024)
-tcp_lat:
-    latency   =  112 us
-    msg_size  =    2 KiB (2,048)
-tcp_lat:
-    latency   =  192 us
-    msg_size  =    4 KiB (4,096)
+    latency   =  186 us
+    msg_size  =    1 KiB (1,024)
 tcp_lat:
     latency   =  196 us
+    msg_size  =    2 KiB (2,048)
+tcp_lat:
+    latency   =  207 us
+    msg_size  =    4 KiB (4,096)
+tcp_lat:
+    latency   =  240 us
     msg_size  =    8 KiB (8,192)
 tcp_lat:
-    latency   =  293 us
+    latency   =  310 us
     msg_size  =   16 KiB (16,384)
 tcp_lat:
-    latency   =  534 us
+    latency   =  484 us
     msg_size  =   32 KiB (32,768)
 tcp_lat:
-    latency   =  987 us
+    latency   =  839 us
     msg_size  =   64 KiB (65,536)
 quit:
